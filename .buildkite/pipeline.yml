@@ -1,0 +1,5 @@
+steps:
+    - name: "First step"
+      command: "step-1.sh"
+      agents:
+          queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
