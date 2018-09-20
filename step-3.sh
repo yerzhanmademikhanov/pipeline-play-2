@@ -1,1 +1,1 @@
-go run component-c/main.go "echo Yerzhan"
+go run component-c/imp-tracer.go "echo Yerzhan"
