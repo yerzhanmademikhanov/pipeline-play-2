@@ -3,11 +3,12 @@ steps:
     command: "step-1.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-  - name: "Sleep For 5 Seconds Step"
-    command: "step-2.sh"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
   - name: "Go Running Command Step"
     command: "step-3.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
+  - name: "Sleep For 5 Seconds Step"
+    command: "step-2.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
