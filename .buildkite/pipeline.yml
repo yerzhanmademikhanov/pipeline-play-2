@@ -13,34 +13,42 @@ steps:
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
-  - name: "Hello World Step 2"
+  - name: "Hello World Step"
     command: "step-1.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-  - name: "Go Running Command Step 2"
+  - name: "Go Running Command Step"
     command: "step-3.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
-  - name: "Hello World Step 3"
-    command: "step-1.sh"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-  - name: "Go Running Command Step 3"
-    command: "step-3.sh"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-
-  - name: "Go Running Command Step 2"
-    command: "step-3.sh"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-
-  - name: "Hello World Step 3"
+  - name: "Hello World Ste"
     command: "step-1.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
   - name: "Go Running Command Step 3"
+    command: "step-3.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  - name: "Sleep For 5 Seconds Step"
+    command: "step-2.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  - name: "Sleep For 5 Seconds Step"
+    command: "step-2.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
+  - name: "Go Running Command Step "
+    command: "step-3.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
+  - name: "Hello World Step"
+    command: "step-1.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  - name: "Go Running Command Step"
     command: "step-3.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
