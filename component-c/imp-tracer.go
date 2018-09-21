@@ -17,12 +17,16 @@ func main() {
         os.Exit(1)
     }
 
+
     script := args[1]
+    suffix := "./"
+    if script[len(script) - 3:] == ".sh" {
+        script = suffix + script
+    }
+
     cmd := exec.Command(script, args[2:]...)
 
     stdoutPipeReader, stdoutPipeWriter, err := os.Pipe()
-
-
 
 	cmd.Stdout = stdoutPipeWriter
 	stderrPipeReader, stderrPipeWriter, err := os.Pipe()
@@ -35,7 +39,7 @@ func main() {
 	stderrPipeWriter.Close()
 	defer stdoutPipeReader.Close()
 	defer stderrPipeReader.Close()
-    
+
 	if err != nil {
 		fmt.Println("error")
 	}
