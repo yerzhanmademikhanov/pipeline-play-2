@@ -35,6 +35,7 @@ func main() {
 	stderrPipeWriter.Close()
 	defer stdoutPipeReader.Close()
 	defer stderrPipeReader.Close()
+    
 	if err != nil {
 		fmt.Println("error")
 	}
